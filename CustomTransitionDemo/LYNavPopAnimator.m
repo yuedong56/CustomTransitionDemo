@@ -26,12 +26,17 @@
     //ToVC（即FirstVC）
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     [containerView addSubview:toVC.view];
-
-    //FromVC（即SecondVC）
-//    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-//    [containerView addSubview:fromVC.view];
     
-//    fromVC.view.frame = self.afterFrame;
+    //替换原来的小图，不会大图小图同时出现
+    UIView *smallImageView = [[UIImageView alloc] initWithFrame:self.beforeFrame];
+    smallImageView.backgroundColor = [UIColor whiteColor];
+    [containerView addSubview:smallImageView];
+    
+    //白色背景
+    UIView *bgView = [[UIView alloc] initWithFrame:toVC.view.bounds];
+    bgView.backgroundColor = [UIColor whiteColor];
+    [containerView addSubview:bgView];
+    bgView.alpha = 1;
     
     //大图
     UIImageView *largeImageView = [[UIImageView alloc] initWithFrame:self.afterFrame];
@@ -41,9 +46,16 @@
     
     //动画
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        bgView.alpha = 0;
         largeImageView.frame = self.beforeFrame;
     }
     completion:^(BOOL finished) {
+        
+        //移除前面的 smallImageView、bgView、largeImageView
+        [smallImageView removeFromSuperview];
+        [bgView removeFromSuperview];
+        [largeImageView removeFromSuperview];
+
         BOOL wasCancelled = [transitionContext transitionWasCancelled];
         //设置transitionContext通知系统动画执行完毕
         [transitionContext completeTransition:!wasCancelled];

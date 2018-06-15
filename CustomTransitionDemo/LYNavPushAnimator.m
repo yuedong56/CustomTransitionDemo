@@ -30,6 +30,11 @@
     [containerView addSubview:toVC.view];
     toVC.view.hidden = YES; //先隐藏，等结束后再显示
 
+    //替换原来的小图，不会大图小图同时出现
+    UIView *smallImageView = [[UIImageView alloc] initWithFrame:self.beforeFrame];
+    smallImageView.backgroundColor = [UIColor whiteColor];
+    [containerView addSubview:smallImageView];
+    
     //背景白色过渡
     UIView *bgView = [[UIView alloc] initWithFrame:toVC.view.bounds];
     bgView.backgroundColor = [UIColor whiteColor];
@@ -51,7 +56,8 @@
         //再显示SecondVC
         toVC.view.hidden = NO;
         
-        //移除前面的 bgView、showImageView
+        //移除前面的 smallImageView、bgView、largeImageView
+        [smallImageView removeFromSuperview];
         [bgView removeFromSuperview];
         [largeImageView removeFromSuperview];
         
