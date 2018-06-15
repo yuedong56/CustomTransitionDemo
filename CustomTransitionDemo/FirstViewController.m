@@ -71,6 +71,10 @@
     self.navPushAnimator.beforeFrame = imageView.frame;
     self.navPushAnimator.afterFrame = [vc imageViewFrameWithImage:image];
     self.navPushAnimator.image = image;
+    
+    self.navPopAnimator.beforeFrame = imageView.frame;
+    self.navPopAnimator.afterFrame = [vc imageViewFrameWithImage:image];
+    self.navPopAnimator.image = image;
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -82,7 +86,6 @@
     if (operation == UINavigationControllerOperationPush) {
         return self.navPushAnimator;
     } else if (operation == UINavigationControllerOperationPop) {
-        return nil;
         return self.navPopAnimator;
     }
     return nil;

@@ -37,13 +37,13 @@
     [containerView addSubview:bgView];
     
     //放大图
-    UIImageView *showImageView = [[UIImageView alloc] initWithFrame:self.beforeFrame];
-    showImageView.image = self.image;
-    [containerView addSubview:showImageView];
+    UIImageView *largeImageView = [[UIImageView alloc] initWithFrame:self.beforeFrame];
+    largeImageView.image = self.image;
+    [containerView addSubview:largeImageView];
     
     //动画
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
-        showImageView.frame = self.afterFrame;
+        largeImageView.frame = self.afterFrame;
         bgView.alpha = 1;
     }
     completion:^(BOOL finished) {
@@ -53,7 +53,7 @@
         
         //移除前面的 bgView、showImageView
         [bgView removeFromSuperview];
-        [showImageView removeFromSuperview];
+        [largeImageView removeFromSuperview];
         
         //设置transitionContext通知系统动画执行完毕
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];

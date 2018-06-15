@@ -13,6 +13,7 @@
 
 @property (nonatomic, assign) CGRect beforeFrame;
 @property (nonatomic, assign) CGRect afterFrame;
+@property (nonatomic, strong) UIImage *image;
 
 
 @end
