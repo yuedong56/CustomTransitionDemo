@@ -13,7 +13,7 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.3;
+    return 0.5;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -47,7 +47,12 @@
     [containerView addSubview:largeImageView];
     
     //动画
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                          delay:0
+         usingSpringWithDamping:0.7
+          initialSpringVelocity:0.3
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
         largeImageView.frame = self.afterFrame;
         bgView.alpha = 1;
     }

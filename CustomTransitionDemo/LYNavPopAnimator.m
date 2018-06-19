@@ -12,7 +12,7 @@
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.3;
+    return 0.5;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -43,23 +43,41 @@
     largeImageView.image = self.image;
     [containerView addSubview:largeImageView];
     
-    
     //动画
-    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+    [UIView animateWithDuration:[self transitionDuration:transitionContext]
+                          delay:0
+         usingSpringWithDamping:0.8
+          initialSpringVelocity:0.3
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{
         bgView.alpha = 0;
         largeImageView.frame = self.beforeFrame;
-    }
-    completion:^(BOOL finished) {
-        
+    } completion:^(BOOL finished) {
         //移除前面的 smallImageView、bgView、largeImageView
         [smallImageView removeFromSuperview];
         [bgView removeFromSuperview];
         [largeImageView removeFromSuperview];
-
+        
         BOOL wasCancelled = [transitionContext transitionWasCancelled];
         //设置transitionContext通知系统动画执行完毕
         [transitionContext completeTransition:!wasCancelled];
     }];
+//    //动画
+//    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+//        bgView.alpha = 0;
+//        largeImageView.frame = self.beforeFrame;
+//    }
+//    completion:^(BOOL finished) {
+//
+//        //移除前面的 smallImageView、bgView、largeImageView
+//        [smallImageView removeFromSuperview];
+//        [bgView removeFromSuperview];
+//        [largeImageView removeFromSuperview];
+//
+//        BOOL wasCancelled = [transitionContext transitionWasCancelled];
+//        //设置transitionContext通知系统动画执行完毕
+//        [transitionContext completeTransition:!wasCancelled];
+//    }];
 }
 
 @end
