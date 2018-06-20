@@ -10,7 +10,7 @@
 
 @interface SecondViewController : UIViewController
 
-- (instancetype)initWithImage:(UIImage *)image;
+- (instancetype)initWithImage:(UIImage *)image beforeFrame:(CGRect)beforeFrame;
 
 - (CGRect)imageViewFrameWithImage:(UIImage *)image;
 

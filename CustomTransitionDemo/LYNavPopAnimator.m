@@ -17,8 +17,21 @@
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
 {
-//    self.beforeFrame = CGRectMake(20, 100, 100, 100);
-//    self.afterFrame = CGRectMake(0, 0, kScreenWidth, kScreenHeight);
+    /*
+    //打开这段代码，是比较简单的返回动画
+    UIViewController *srcVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *secondVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIView *container = [transitionContext containerView];
+    [container addSubview:srcVC.view];
+    [container addSubview:secondVC.view];
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
+        secondVC.view.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, secondVC.view.bounds.size.width, secondVC.view.bounds.size.height);
+    } completion:^(BOOL finished) {
+        [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+    }];
+    return;
+     */
     
     //转场过渡的容器view, 转场时看到的视图都是该view里的
     UIView *containerView = [transitionContext containerView];

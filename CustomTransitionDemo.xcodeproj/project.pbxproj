@@ -18,7 +18,17 @@
 		3507FF3620D2813B002D99A0 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3507FF3520D2813B002D99A0 /* 1.jpg */; };
 		3507FF3920D2836E002D99A0 /* LYNavPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507FF3820D2836E002D99A0 /* LYNavPushAnimator.m */; };
 		3507FF3C20D2837D002D99A0 /* LYNavPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507FF3B20D2837D002D99A0 /* LYNavPopAnimator.m */; };
+		3565997B20D90B0D00F5EE6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3565997A20D90B0D00F5EE6D /* AppDelegate.m */; };
+		3565997E20D90B0D00F5EE6D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3565997D20D90B0D00F5EE6D /* ViewController.m */; };
+		3565998120D90B0D00F5EE6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3565997F20D90B0D00F5EE6D /* Main.storyboard */; };
+		3565998320D90B0F00F5EE6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3565998220D90B0F00F5EE6D /* Assets.xcassets */; };
+		3565998620D90B0F00F5EE6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3565998420D90B0F00F5EE6D /* LaunchScreen.storyboard */; };
+		3565998920D90B0F00F5EE6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3565998820D90B0F00F5EE6D /* main.m */; };
+		3565998F20D90B7000F5EE6D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3565998E20D90B7000F5EE6D /* SecondViewController.m */; };
+		3565999220D90DB000F5EE6D /* PopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3565999120D90DB000F5EE6D /* PopAnimator.m */; };
+		3565999520D90DCD00F5EE6D /* InteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 3565999420D90DCD00F5EE6D /* InteractiveTransition.m */; };
 		35FE565820D39774001FF2A0 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35FE565720D39774001FF2A0 /* 2.jpg */; };
+		35FE565B20D3A992001FF2A0 /* LYNavInteractiveAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 35FE565A20D3A992001FF2A0 /* LYNavInteractiveAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,11 +52,36 @@
 		3507FF3A20D2837D002D99A0 /* LYNavPopAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYNavPopAnimator.h; sourceTree = "<group>"; };
 		3507FF3B20D2837D002D99A0 /* LYNavPopAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYNavPopAnimator.m; sourceTree = "<group>"; };
 		3507FF3D20D36B6B002D99A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		3565997720D90B0D00F5EE6D /* Present.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Present.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3565997920D90B0D00F5EE6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3565997A20D90B0D00F5EE6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3565997C20D90B0D00F5EE6D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3565997D20D90B0D00F5EE6D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3565998020D90B0D00F5EE6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3565998220D90B0F00F5EE6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3565998520D90B0F00F5EE6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3565998720D90B0F00F5EE6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3565998820D90B0F00F5EE6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3565998D20D90B6F00F5EE6D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		3565998E20D90B7000F5EE6D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3565999020D90DB000F5EE6D /* PopAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopAnimator.h; sourceTree = "<group>"; };
+		3565999120D90DB000F5EE6D /* PopAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopAnimator.m; sourceTree = "<group>"; };
+		3565999320D90DCD00F5EE6D /* InteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InteractiveTransition.h; sourceTree = "<group>"; };
+		3565999420D90DCD00F5EE6D /* InteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveTransition.m; sourceTree = "<group>"; };
 		35FE565720D39774001FF2A0 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		35FE565920D3A992001FF2A0 /* LYNavInteractiveAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYNavInteractiveAnimator.h; sourceTree = "<group>"; };
+		35FE565A20D3A992001FF2A0 /* LYNavInteractiveAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYNavInteractiveAnimator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3507FEFF20D21A74002D99A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3565997420D90B0D00F5EE6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				3507FF0420D21A74002D99A0 /* CustomTransitionDemo */,
+				3565997820D90B0D00F5EE6D /* Present */,
 				3507FF0320D21A74002D99A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				3507FF0220D21A74002D99A0 /* CustomTransitionDemo.app */,
+				3565997720D90B0D00F5EE6D /* Present.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +124,8 @@
 				3507FF3820D2836E002D99A0 /* LYNavPushAnimator.m */,
 				3507FF3A20D2837D002D99A0 /* LYNavPopAnimator.h */,
 				3507FF3B20D2837D002D99A0 /* LYNavPopAnimator.m */,
+				35FE565920D3A992001FF2A0 /* LYNavInteractiveAnimator.h */,
+				35FE565A20D3A992001FF2A0 /* LYNavInteractiveAnimator.m */,
 				3507FF3520D2813B002D99A0 /* 1.jpg */,
 				35FE565720D39774001FF2A0 /* 2.jpg */,
 				3507FF0B20D21A74002D99A0 /* Main.storyboard */,
@@ -97,6 +136,28 @@
 				3507FF3D20D36B6B002D99A0 /* PrefixHeader.pch */,
 			);
 			path = CustomTransitionDemo;
+			sourceTree = "<group>";
+		};
+		3565997820D90B0D00F5EE6D /* Present */ = {
+			isa = PBXGroup;
+			children = (
+				3565997920D90B0D00F5EE6D /* AppDelegate.h */,
+				3565997A20D90B0D00F5EE6D /* AppDelegate.m */,
+				3565997C20D90B0D00F5EE6D /* ViewController.h */,
+				3565997D20D90B0D00F5EE6D /* ViewController.m */,
+				3565998D20D90B6F00F5EE6D /* SecondViewController.h */,
+				3565998E20D90B7000F5EE6D /* SecondViewController.m */,
+				3565999020D90DB000F5EE6D /* PopAnimator.h */,
+				3565999120D90DB000F5EE6D /* PopAnimator.m */,
+				3565999320D90DCD00F5EE6D /* InteractiveTransition.h */,
+				3565999420D90DCD00F5EE6D /* InteractiveTransition.m */,
+				3565997F20D90B0D00F5EE6D /* Main.storyboard */,
+				3565998220D90B0F00F5EE6D /* Assets.xcassets */,
+				3565998420D90B0F00F5EE6D /* LaunchScreen.storyboard */,
+				3565998720D90B0F00F5EE6D /* Info.plist */,
+				3565998820D90B0F00F5EE6D /* main.m */,
+			);
+			path = Present;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +180,23 @@
 			productReference = 3507FF0220D21A74002D99A0 /* CustomTransitionDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3565997620D90B0D00F5EE6D /* Present */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3565998C20D90B0F00F5EE6D /* Build configuration list for PBXNativeTarget "Present" */;
+			buildPhases = (
+				3565997320D90B0D00F5EE6D /* Sources */,
+				3565997420D90B0D00F5EE6D /* Frameworks */,
+				3565997520D90B0D00F5EE6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Present;
+			productName = Present;
+			productReference = 3565997720D90B0D00F5EE6D /* Present.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -129,6 +207,9 @@
 				ORGANIZATIONNAME = YR;
 				TargetAttributes = {
 					3507FF0120D21A74002D99A0 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					3565997620D90B0D00F5EE6D = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -147,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				3507FF0120D21A74002D99A0 /* CustomTransitionDemo */,
+				3565997620D90B0D00F5EE6D /* Present */,
 			);
 		};
 /* End PBXProject section */
@@ -164,6 +246,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3565997520D90B0D00F5EE6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3565998620D90B0F00F5EE6D /* LaunchScreen.storyboard in Resources */,
+				3565998320D90B0F00F5EE6D /* Assets.xcassets in Resources */,
+				3565998120D90B0D00F5EE6D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -173,11 +265,25 @@
 			files = (
 				3507FF1D20D21B8D002D99A0 /* SecondViewController.m in Sources */,
 				3507FF0A20D21A74002D99A0 /* RootViewController.m in Sources */,
+				35FE565B20D3A992001FF2A0 /* LYNavInteractiveAnimator.m in Sources */,
 				3507FF2120D24549002D99A0 /* FirstViewController.m in Sources */,
 				3507FF1520D21A75002D99A0 /* main.m in Sources */,
 				3507FF0720D21A74002D99A0 /* AppDelegate.m in Sources */,
 				3507FF3C20D2837D002D99A0 /* LYNavPopAnimator.m in Sources */,
 				3507FF3920D2836E002D99A0 /* LYNavPushAnimator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3565997320D90B0D00F5EE6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3565998F20D90B7000F5EE6D /* SecondViewController.m in Sources */,
+				3565997E20D90B0D00F5EE6D /* ViewController.m in Sources */,
+				3565998920D90B0F00F5EE6D /* main.m in Sources */,
+				3565997B20D90B0D00F5EE6D /* AppDelegate.m in Sources */,
+				3565999220D90DB000F5EE6D /* PopAnimator.m in Sources */,
+				3565999520D90DCD00F5EE6D /* InteractiveTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +302,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				3507FF1120D21A75002D99A0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3565997F20D90B0D00F5EE6D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3565998020D90B0D00F5EE6D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3565998420D90B0F00F5EE6D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3565998520D90B0F00F5EE6D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -351,6 +473,38 @@
 			};
 			name = Release;
 		};
+		3565998A20D90B0F00F5EE6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Present/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YR.Present;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3565998B20D90B0F00F5EE6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Present/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = YR.Present;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -368,6 +522,15 @@
 			buildConfigurations = (
 				3507FF1920D21A75002D99A0 /* Debug */,
 				3507FF1A20D21A75002D99A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3565998C20D90B0F00F5EE6D /* Build configuration list for PBXNativeTarget "Present" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3565998A20D90B0F00F5EE6D /* Debug */,
+				3565998B20D90B0F00F5EE6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

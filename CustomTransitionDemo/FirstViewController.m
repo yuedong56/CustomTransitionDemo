@@ -11,11 +11,13 @@
 
 #import "LYNavPushAnimator.h"
 #import "LYNavPopAnimator.h"
+#import "LYNavInteractiveAnimator.h"
 
 @interface FirstViewController () <UINavigationControllerDelegate>
 
 @property (nonatomic, strong) LYNavPushAnimator *navPushAnimator;
 @property (nonatomic, strong) LYNavPopAnimator *navPopAnimator;
+@property (nonatomic, strong) LYNavInteractiveAnimator *navInteractiveAnimator;
 
 @end
 
@@ -49,7 +51,7 @@
     imageView2.userInteractionEnabled = YES;
     [self.view addSubview:imageView2];
     
-    
+    //点击放大手势
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction:)];
     [imageView1 addGestureRecognizer:tap1];
     
@@ -65,7 +67,7 @@
     
     self.navigationController.delegate = self; //设置代理
 
-    SecondViewController *vc = [[SecondViewController alloc] initWithImage:image];
+    SecondViewController *vc = [[SecondViewController alloc] initWithImage:image beforeFrame:imageView.frame];
     [self.navigationController pushViewController:vc animated:YES];
     
     self.navPushAnimator.beforeFrame = imageView.frame;
@@ -78,6 +80,7 @@
 }
 
 #pragma mark - UINavigationControllerDelegate
+// push 和 pop 转场动画代理
 - (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
                                   animationControllerForOperation:(UINavigationControllerOperation)operation
                                                fromViewController:(UIViewController *)fromVC
@@ -90,7 +93,6 @@
     }
     return nil;
 }
-
 
 @end
 
