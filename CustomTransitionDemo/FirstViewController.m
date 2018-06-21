@@ -16,7 +16,6 @@
 @interface FirstViewController () <UINavigationControllerDelegate>
 
 @property (nonatomic, strong) LYNavPushAnimator *navPushAnimator;
-@property (nonatomic, strong) LYNavPopAnimator *navPopAnimator;
 @property (nonatomic, strong) LYNavInteractiveAnimator *navInteractiveAnimator;
 
 @end
@@ -30,7 +29,6 @@
     self = [super init];
     if (self) {
         self.navPushAnimator = [[LYNavPushAnimator alloc] init];
-        self.navPopAnimator  = [[LYNavPopAnimator alloc] init];
     }
     return self;
 }
@@ -73,10 +71,6 @@
     self.navPushAnimator.beforeFrame = imageView.frame;
     self.navPushAnimator.afterFrame = [vc imageViewFrameWithImage:image];
     self.navPushAnimator.image = image;
-    
-    self.navPopAnimator.beforeFrame = imageView.frame;
-    self.navPopAnimator.afterFrame = [vc imageViewFrameWithImage:image];
-    self.navPopAnimator.image = image;
 }
 
 #pragma mark - UINavigationControllerDelegate
@@ -88,8 +82,6 @@
 {
     if (operation == UINavigationControllerOperationPush) {
         return self.navPushAnimator;
-    } else if (operation == UINavigationControllerOperationPop) {
-        return self.navPopAnimator;
     }
     return nil;
 }
